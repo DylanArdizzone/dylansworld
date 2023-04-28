@@ -1,0 +1,46 @@
+body {
+	background-color: #000;
+}
+
+header {
+	text-align: center;
+	color: #fff;
+}
+
+#game-container {
+	position: relative;
+	margin: 0 auto;
+	height: 400px;
+	width: 800px;
+	background-color: #333;
+}
+
+#mario {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 80px;
+	width: 60px;
+	background-color: #ff00ff;
+	animation: move-mario 2s infinite linear;
+}
+
+#coin {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 50px;
+	width: 50px;
+	background-color: #00ffff;
+	animation: rotate-coin 1s infinite linear;
+}
+
+@keyframes move-mario {
+	from { left: 0; }
+	to { left: calc(100% - 60px); }
+}
+
+@keyframes rotate-coin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
