@@ -88,4 +88,31 @@
 		<p>&copy; 2023 Free Downloads, Inc.</p>
 	</footer>
 </body>
+<html>
+<head>
+  <title>Button Style Change</title>
+  <link id="styleLink" rel="stylesheet" href="style1.css">
+  <style>
+    #myButton {
+      font-size: 16px;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button id="myButton" onclick="changeStyle()">Click me to change style</button>
+
+  <script>
+    function changeStyle() {
+      var styleLink = document.getElementById("styleLink");
+      if (styleLink.getAttribute("href") === "style1.css") {
+        styleLink.setAttribute("href", "style2.css");
+      } else {
+        styleLink.setAttribute("href", "style1.css");
+      }
+    }
+  </script>
+</body>
 </html>
